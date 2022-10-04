@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0A192F !important;
+}
+
+.title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 62px;
+  margin-bottom: 22px;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", sans-serif;
+}
+
+.para {
+  font-size: 16px;
+  line-height: 30px;
+  color: #c4cfde;
+  opacity: 0.9;
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 2em;
+}
+.con #input-date {
+  display: block;
+  padding: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.con .srch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.9em 1em;
+  border: 1px solid #64ffda;
+  cursor: pointer;
+  background-color: #64ffda;
+  line-height: 1;
+  border-radius: 4px;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #060606;
+  padding: 0.85rem 2.75rem;
+}
+.con .output {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: #c4cfde;
+  opacity: 0.9;
+}/*# sourceMappingURL=main.css.map */
