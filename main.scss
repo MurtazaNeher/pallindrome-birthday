@@ -11,11 +11,13 @@ body {
 
 .main {
     min-height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     background: #0A192F !important;
+    padding: 2em 0 0;
 }
 
 .title {
@@ -50,7 +52,7 @@ body {
         cursor: pointer;
     }
 
-    .srch-btn{
+    .srch-btn {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -68,11 +70,13 @@ body {
         padding: 0.85rem 2.75rem;
     }
 
-    .output{
-        font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-        font-size: 16px;
+    .output {
+        font-size: 18px;
+        line-height: 150%;
         line-height: 30px;
+        font-weight: 500;
         color: #c4cfde;
         opacity: 0.9;
+        margin-top: 2em;
     }
 }

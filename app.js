@@ -91,10 +91,47 @@ function getNextDate(date) {
   };
 }
 
-let date = {
-  day: 31,
-  month: 12,
-  year: 2020,
-};
+function getNextPallindrome(date) {
+  let count = 0;
+  let nextDate = getNextDate(date);
 
-console.log(getNextDate(date))
+  while (1) {
+    count++;
+    var isPallindrome = checkPallindromeForAllDateFormats(nextDate);
+    if (isPallindrome) {
+      break;
+    }
+    nextDate = getNextDate(nextDate);
+  }
+
+  return [count, nextDate];
+}
+
+const dateInput = document.querySelector("#input-date");
+const srchBtn = document.querySelector(".srch-btn");
+const output = document.querySelector(".output");
+
+function clickHandler() {
+  let inputDate = dateInput.value;
+
+  if (inputDate !== "") {
+    let listOfDate = inputDate.split("-");
+    let date = {
+      day: Number(listOfDate[2]),
+      month: Number(listOfDate[1]),
+      year: Number(listOfDate[0]),
+    };
+
+    let isPallindrome = checkPallindromeForAllDateFormats(date);
+
+    if (isPallindrome) {
+      output.innerText = "Yeah!!! Your birthady is pallindorme 😉";
+    } else {
+      let [count, nextDate] = getNextPallindrome(date);
+
+      output.innerText = `The next pallindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, You missed it by ${count} days 🙂`;
+    }
+  }
+}
+
+srchBtn.addEventListener("click", clickHandler);
